@@ -5,9 +5,12 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.myapplication.databinding.ActivityCatalogBinding
 
 class Catalog : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        binding = ActivityCatalogBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_catalog)
@@ -17,4 +20,5 @@ class Catalog : AppCompatActivity() {
             insets
         }
     }
+    private  lateinit var binding: ActivityCatalogBinding
 }

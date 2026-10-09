@@ -5,9 +5,12 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.myapplication.databinding.ActivityHome2Binding
 
 class home2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        binding = ActivityHome2Binding.inflate(layoutInflater)
+        setContentView(binding.root)
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_home2)
@@ -17,4 +20,5 @@ class home2 : AppCompatActivity() {
             insets
         }
     }
+    private  lateinit var binding: ActivityHome2Binding
 }

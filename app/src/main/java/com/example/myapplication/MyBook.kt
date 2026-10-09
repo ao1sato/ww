@@ -5,9 +5,12 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.myapplication.databinding.ActivityMyBookBinding
 
 class MyBook : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        binding = ActivityMyBookBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_my_book)
@@ -17,4 +20,5 @@ class MyBook : AppCompatActivity() {
             insets
         }
     }
+    private  lateinit var binding: ActivityMyBookBinding
 }

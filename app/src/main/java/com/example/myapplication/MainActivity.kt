@@ -5,9 +5,12 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.myapplication.databinding.LoginBinding
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        binding = LoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.login)
@@ -17,4 +20,5 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
+    private  lateinit var binding: LoginBinding
 }

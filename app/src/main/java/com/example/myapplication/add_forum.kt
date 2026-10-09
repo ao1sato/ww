@@ -5,9 +5,12 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.myapplication.databinding.ActivityAddForumBinding
 
 class add_forum : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        binding = ActivityAddForumBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_add_forum)
@@ -17,4 +20,5 @@ class add_forum : AppCompatActivity() {
             insets
         }
     }
+    private  lateinit var binding: ActivityAddForumBinding
 }
