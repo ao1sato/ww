@@ -19,6 +19,8 @@ class Catalog : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
     }
+
     private  lateinit var binding: ActivityCatalogBinding
 }

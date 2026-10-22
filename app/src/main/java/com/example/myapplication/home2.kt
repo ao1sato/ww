@@ -9,11 +9,12 @@ import com.example.myapplication.databinding.ActivityHome2Binding
 
 class home2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         binding = ActivityHome2Binding.inflate(layoutInflater)
         setContentView(binding.root)
-        super.onCreate(savedInstanceState)
+
         enableEdgeToEdge()
-        setContentView(R.layout.activity_home2)
+       // setContentView(R.layout.activity_home2)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
